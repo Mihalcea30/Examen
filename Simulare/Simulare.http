@@ -1,0 +1,6 @@
+@Simulare_HostAddress = http://localhost:5062
+
+GET {{Simulare_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
