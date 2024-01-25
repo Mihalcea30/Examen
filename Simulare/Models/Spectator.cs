@@ -2,16 +2,14 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Simulare.Models
 {
-  public class Student
+  public class Spectator
   {
-    [Key]
-    public int Id { get; set; }
+    public int ParticipantId { get; set; }
 
     public string Name { get; set; }
 
     public int Age { get; set; }
 
-    public string University { get; set; }
-
+    public Participant Participant { get; set; } = null!;
   }
 }

@@ -7,6 +7,9 @@ import { ClientDetailsFormComponent } from './client-details/client-details-form
 import {HttpClient, HttpClientModule} from "@angular/common/http";
 import {FormsModule} from "@angular/forms";
 import { StudentComponent } from './student/student.component';
+import { EventsComponent } from './events/events.component';
+import { EventsFormComponent } from './events/events-form/events-form.component';
+import { ParticipantsComponent } from './participants/participants.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +17,10 @@ import { StudentComponent } from './student/student.component';
     ClientDetailsComponent,
     ClientDetailsFormComponent,
     StudentComponent,
+    EventsComponent,
+    EventsFormComponent,
+    ParticipantsComponent,
+    EventsComponent,
   ],
   imports: [
     BrowserModule,

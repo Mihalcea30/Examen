@@ -1,28 +1,32 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from "@angular/common/http";
 import {environment} from "../../environments/environment";
-import {ClientDetail} from "./client-detail.model.ts";
+//import {}
+import {HttpClient} from "@angular/common/http";
+import {Eveniment} from "./events.model.ts";
 
 @Injectable({
   providedIn: 'root'
 })
-export class ClientDetailService {
-  url:string = environment.apiBaseUrl + '/Clients'
-  list:ClientDetail[] = [];
-  formData : ClientDetail = new ClientDetail()
+export class EventsService {
+
+  url:string = environment.apiBaseUrl + '/Events'
+  list:Eveniment[] = [];
+
+  formData : Eveniment = new Eveniment()
   constructor(private http : HttpClient) { }
   refreshList(){
     this.http.get(this.url)
       .subscribe({
         next :res =>{
-          this.list = res as ClientDetail[]
+          this.list = res as Eveniment[]
         },
         error: err => {console.log(err)}
 
       })
   }
-  postClientDetail(){
+  postServiceDetail(){
     return this.http.post(this.url,this.formData)
   }
-}
 
+
+}
